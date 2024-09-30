@@ -19,7 +19,7 @@ function countArgs(...theArgs) {
   alert(total)
 }
 
-// countArgs(1, 2, 3, 4, 5, 56, 6767, 66690)
+countArgs(1, 2, 3, 4, 5, 56, 6767, 66690)
 
 
 // Напиши функцію, яка приймає 2 числа і повертає :
@@ -43,7 +43,7 @@ function judge() {
   } else alert(0)
 }
 
-// judge()
+judge()
 
 // Напиши функцію, яка обчислює факторіал переданого їй числа.
 
@@ -69,7 +69,7 @@ function merger(hundreds, tens, ones) {
   alert(output)
 }
 
-// merger(3, 5, 6)
+merger(3, 5, 6)
 
 // Напиши функцію, яка приймає довжину і ширину прямокутника і обчислює його площу. Якщо в функцію передали 1 параметр, то вона обчислює площу квадрата.
 
@@ -83,7 +83,7 @@ function areaCalculator(a, b) {
   } else { alert('invalid data') }
 }
 
-// areaCalculator (60)
+areaCalculator (60)
 
 // Норма
 
@@ -109,7 +109,7 @@ function isPerfect(num) {
   return sum === num;
 }
 
-// perfectNumber(6)
+perfectNumber(6)
 
 
 // Напиши функцію, яка приймає мінімальне і максимальне значення для діапазону, і виводить тільки ті числа з діапазону, які є досконалими. Використовуй написану раніше функцію, щоб дізнатися, чи є це число досконалим.
@@ -124,4 +124,4 @@ function logPerfectNumberBetween() {
   }
 }
 
-// logPerfectNumberBetween()
+logPerfectNumberBetween()
