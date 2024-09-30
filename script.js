@@ -27,23 +27,23 @@ function countArgs(...theArgs) {
 // 1 - якщо перше число більше, ніж друге; 
 // 0 - якщо числа рівні.
 
-// let initialData = prompt('Enter two numbers: /n(like 4 -6)')
-// let separated = initialData.split(' ')
-
-// let a = Number(separated[0])
-// let b = Number(separated[1])
-
-// function judge(a, b) {
 
 
-//   if ((a - b) > 0) {
-//     alert(1)
-//   } else if ((a - b) < 0) {
-//     alert(-1)
-//   } else alert(0)
-// }
+function judge() {
+  let initialData = prompt('Enter two numbers: /n(like 4 -6)')
+  let separated = initialData.split(' ')
 
-// judge(a, b)
+  let a = Number(separated[0])
+  let b = Number(separated[1])
+
+  if ((a - b) > 0) {
+    alert(1)
+  } else if ((a - b) < 0) {
+    alert(-1)
+  } else alert(0)
+}
+
+// judge()
 
 // Напиши функцію, яка обчислює факторіал переданого їй числа.
 
@@ -90,30 +90,38 @@ function areaCalculator(a, b) {
 // Напиши функцію, яка перевіряє, чи є передане їй число “досконалим числом”. Досконале число - це число, яке дорівнює сумі всіх своїх дільників.
 
 function perfectNumber(num) {
-  let div = []
-  for (let i = 1; i < num; i++) {
-    if (num % i === 0) {
-      div.push(i)
-    }
-  }
+  const perfect = isPerfect(num);
 
-  let sum = 0
-  for (let i = 0; i < div.length; i++) {
-    sum += div[i]
-  }
-
-  if (sum === num) {
-    alert (`${num} is a perfect number`)
+  if (perfect) {
+    alert(`${num} is a perfect number`);
   } else {
-    alert (`${num} is not a perfect number`)
+    alert(`${num} is not a perfect number`);
   }
 }
 
-perfectNumber(6)
+function isPerfect(num) {
+  let sum = 0;
 
+  for (let i = 1; i <= num / 2; i++) {
+    if (num % i === 0) sum += i;
+  }
 
+  return sum === num;
+}
 
-
+// perfectNumber(6)
 
 
 // Напиши функцію, яка приймає мінімальне і максимальне значення для діапазону, і виводить тільки ті числа з діапазону, які є досконалими. Використовуй написану раніше функцію, щоб дізнатися, чи є це число досконалим.
+
+
+function logPerfectNumberBetween() {
+  const minMax = prompt('Enter two positive numbers: /n(like 45 68)')
+  const [a, b] = minMax.split(" ")
+
+  for (let i = +a; i <= +b; i++) {
+    isPerfect(i) && console.log(i)
+  }
+}
+
+// logPerfectNumberBetween()
