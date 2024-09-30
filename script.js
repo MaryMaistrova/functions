@@ -83,15 +83,33 @@ function areaCalculator(a, b) {
   } else { alert('invalid data') }
 }
 
-areaCalculator (60)
+// areaCalculator (60)
 
 // Норма
 
 // Напиши функцію, яка перевіряє, чи є передане їй число “досконалим числом”. Досконале число - це число, яке дорівнює сумі всіх своїх дільників.
 
+function perfectNumber(num) {
+  let div = []
+  for (let i = 1; i < num; i++) {
+    if (num % i === 0) {
+      div.push(i)
+    }
+  }
 
+  let sum = 0
+  for (let i = 0; i < div.length; i++) {
+    sum += div[i]
+  }
 
+  if (sum === num) {
+    alert (`${num} is a perfect number`)
+  } else {
+    alert (`${num} is not a perfect number`)
+  }
+}
 
+perfectNumber(6)
 
 
 
